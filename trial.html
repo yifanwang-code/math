@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>JS Bin</title>
+<style>
+#Set1{
+  position: absolute;
+  top: 0px;
+  left: 250px;
+  width: 200px;
+  height: 1600px;
+  
+}
+#Set2{
+  position: absolute;
+  top: 0px;
+  left: 700px;
+  width: 200px;
+  height: 1600px;
+  
+}
+    
+</style>
+</head>
+
+<body>
+<div id="Set1">Set 1</div>
+<p style="FONT-SIZE:20px; LINE-HEIGHT:10px;"> </p>
+
+<script>
+
+  var para = document.createElement("P");  
+  para.style.fontSize = "25px"
+  para.style.lineSpace = "25px"
+  
+  var eq = {}
+  var i = 0
+  
+  while(i<25){
+    
+  
+    eq.first = Math.floor(Math.random() * 100)
+  
+    randomsign = Math.random()
+    if ( randomsign < 0.5) {
+      sign = "+"
+      eq.second = Math.floor(Math.random() * (100 - eq.first))
+    }else { 
+      sign = "-"
+      eq.second = eq.first - Math.floor(Math.random() * eq.first)
+    }
+    var t = document.createTextNode(eq.first + sign + eq.second + '=')
+    var linebreak = document.createElement("br");
+    para.appendChild(linebreak);
+    var linebreak = document.createElement("br");
+    para.appendChild(linebreak);
+    para.appendChild(t);
+
+    document.getElementById("Set1").appendChild(para);
+    i++;
+  }
+</script> 
+
+<div id="Set2">Set 2</div>
+<p style="FONT-SIZE:20px; LINE-HEIGHT:10px;"> </p>
+
+<script>
+
+  var para = document.createElement("P");  
+  para.style.fontSize = "25px"
+  para.style.lineSpace = "25px"
+  
+  
+  var eq = {}
+  var i = 0
+  
+  while(i<25){
+    
+  
+    eq.first = Math.floor(Math.random() * 100)
+  
+    randomsign = Math.random()
+    if ( randomsign < 0.5) {
+      sign = "+"
+      eq.second = Math.floor(Math.random() * (100 - eq.first))
+    }else { 
+      sign = "-"
+      eq.second = eq.first - Math.floor(Math.random() * eq.first)
+    }
+    var t = document.createTextNode(eq.first + sign + eq.second + '=')
+    var linebreak = document.createElement("br");
+    para.appendChild(linebreak);
+    var linebreak = document.createElement("br");
+    para.appendChild(linebreak);
+    para.appendChild(t);
+
+    document.getElementById("Set2").appendChild(para);
+    i++;
+  }
+</script> 
+
+</body>
+</html>
+
+
