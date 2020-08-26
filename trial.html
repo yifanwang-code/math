@@ -41,17 +41,17 @@
   while(i<25){
     
   
-    eq.first = Math.floor(Math.random() * 100)
+    eq.first = Math.floor(Math.random() *60) + 20
   
     randomsign = Math.random()
     if ( randomsign < 0.5) {
       sign = "+"
-      eq.second = Math.floor(Math.random() * (100 - eq.first))
+      eq.second = 20 + Math.floor(Math.random() * (80 - eq.first))
     }else { 
       sign = "-"
-      eq.second = eq.first - Math.floor(Math.random() * eq.first)
+      eq.second = Math.floor(Math.random() * (eq.first-15))+10
     }
-    var t = document.createTextNode(eq.first + sign + eq.second + '=')
+    var t = document.createTextNode(eq.first + " " + sign+ " " + eq.second + ' =')
     var linebreak = document.createElement("br");
     para.appendChild(linebreak);
     var linebreak = document.createElement("br");
@@ -79,17 +79,17 @@
   while(i<25){
     
   
-    eq.first = Math.floor(Math.random() * 100)
+    eq.first = Math.floor(Math.random() *60) + 20
   
     randomsign = Math.random()
     if ( randomsign < 0.5) {
       sign = "+"
-      eq.second = Math.floor(Math.random() * (100 - eq.first))
+      eq.second = 20 + Math.floor(Math.random() * (80 - eq.first))
     }else { 
       sign = "-"
-      eq.second = eq.first - Math.floor(Math.random() * eq.first)
+      eq.second = Math.floor(Math.random() * (eq.first-15))+10
     }
-    var t = document.createTextNode(eq.first + sign + eq.second + '=')
+    var t = document.createTextNode(eq.first + " " + sign+ " " + eq.second + ' =')
     var linebreak = document.createElement("br");
     para.appendChild(linebreak);
     var linebreak = document.createElement("br");
@@ -103,5 +103,6 @@
 
 </body>
 </html>
+
 
 
